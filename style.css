@@ -34,6 +34,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+  background-position: calc(50% - 500px) calc(50% - 400px), calc(50% + 480px) calc(50% + 500px);
+  background-repeat: no-repeat;
 }
 
 body,
@@ -61,8 +65,6 @@ img {
 }
 
 .card {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,32 +120,4 @@ img {
   color: var(--clr-dark-gray);
   margin-top: 9px;
   margin-bottom: 2.7rem;
-}
-
-.circle-top {
-  position: absolute;
-  top: -30vw;
-  left: -10vw;
-  width: 60vw;
-}
-
-.circle-bottom {
-  position: absolute;
-  bottom: -36vw;
-  right: -10vw;
-  width: 60vw;
-}
-
-@media (max-width: 430px) {
-  .circle-top {
-    top: -20vw; /* Adjust the position to better align with the card */
-    left: -30vw; /* Adjust the position to better align with the card */
-    width: 80vw; /* Adjust width to fit the smaller screen */
-  }
-
-  .circle-bottom {
-    bottom: -20vw; /* Adjust the position to better align with the card */
-    right: -20vw; /* Adjust the position to better align with the card */
-    width: 80vw; /* Adjust width to fit the smaller screen */
-  }
 }
